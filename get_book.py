@@ -1,4 +1,4 @@
-from PyPDF2 import PdfFileReader, PdfFileWriter, PageRange
+from PyPDF2 import PdfFileReader, PdfFileWriter
 output = PdfFileWriter()
 
 
@@ -10,4 +10,5 @@ def get(path, pages: list, output_path):
             with open(output_path, "wb") as writefile:
                 insert = output.insertPage(page=page, index=pages.index(list))
                 output.write(writefile)
-
+    print("Sorting successfully done!")
+    return None
