@@ -9,7 +9,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts':
-            ['bookcombiner = booksort.main:main']
+            ['bookcombiner = booksort.bookcombiner:bookcombiner']
     },
     install_requires=[
         'click==7.0', 'PyPDF2==1.26.0'
