@@ -8,9 +8,9 @@ from booksort.lib.slicer import slicer
 
 
 @click.command()
-@click.option('--input', help="paste path")
-@click.option('--output', help="paste output path")
-@click.option('--pages', default=10, help="paste pages")
+@click.option('-i', '--input', help="paste path")
+@click.option('-o', '--output', help="paste output path")
+@click.option('-p', '--pages', default=10, help="paste pages")
 def main(input, output, pages):
     print(input)
     new_verison = book(pathfrom=input, pages=pages)
