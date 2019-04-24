@@ -12,10 +12,8 @@ from booksort.lib.slicer import slicer
 @click.option('-o', '--output', help="paste output path")
 @click.option('-p', '--pages', default=10, help="paste pages")
 def main(input, output, pages):
-    print(input)
     new_verison = book(pathfrom=input, pages=pages)
-    print(new_verison)
-    new_pdf = get(path=input, pages=new_verison, output_path=output)
+    new_pdf = get(path=new_verison[1], pages=new_verison[0], output_path=output)
     return None
 
 
