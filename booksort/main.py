@@ -6,7 +6,6 @@ from booksort.get_book import get
 from booksort.pagesorter import book
 from booksort.lib.slicer import slicer
 
-
 @click.command()
 @click.option('-i', '--input', help="paste path")
 @click.option('-o', '--output', help="paste output path")
