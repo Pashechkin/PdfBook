@@ -13,7 +13,10 @@ setup(
     },
     install_requires=[
         'click==7.0', 'PyPDF2==1.26.0'
-    ]
+    ],
+    dependency_links=['https://github.com/Pashechkin/PdfBook.git'],
+    include_package_data=True,
+    zip_safe=False
 )
 
 
