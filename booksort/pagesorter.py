@@ -7,14 +7,16 @@ from booksort.insert_page import insert
 def book(pathfrom, pages):
     read = PdfFileReader(pathfrom)
     number = read.getNumPages()
+
     limit = 0
 
     while number % 4 != 0:
         number += 1
         limit += 1
-    path = ''
 
+    path = pathfrom
     if limit > 0:
+        print(limit)
         path = insert(pathfrom, limits=limit)
 
     newfile = PdfFileReader(path)
@@ -31,3 +33,4 @@ def book(pathfrom, pages):
             return_lst.append(dq.popleft())
             return_lst.append(dq.pop())
     return [return_lst, path]
+
